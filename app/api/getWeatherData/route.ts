@@ -15,7 +15,7 @@ export async function GET(request:Request): Promise<NextResponse> {
     }
 
     const res = await fetch(
-        `https://www.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next7days?unitGroup=us&include=days%2Ccurrent%2Cevents&key=${WEATHER_API_KEY}&contentType=json`
+        `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/next7days?unitGroup=us&include=days%2Ccurrent%2Cevents&key=${WEATHER_API_KEY}&contentType=json`
     )
 
     if (res.status !== 200) {
